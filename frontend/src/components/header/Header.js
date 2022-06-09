@@ -7,7 +7,7 @@ export const Header = () => {
     <>
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="#home">Car Rental Service</Navbar.Brand>
+                <Navbar.Brand href="/">Car Rental Service</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
