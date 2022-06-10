@@ -9,7 +9,7 @@ export const Services = () => {
         <Container>
             <Row>
                 <Col>
-                    Choose a Service
+                    <h3>Choose a Service</h3>
                     <Row>
                         <Nav>
                             <LinkContainer to='replacement'>
