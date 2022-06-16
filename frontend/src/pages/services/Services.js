@@ -19,7 +19,7 @@ export const Services = () => {
                     </Row>
                     <Row>
                         <Nav>
-                            <LinkContainer to='/services/leave'>
+                            <LinkContainer to='leave'>
                                 <Nav.Link>Leave Car</Nav.Link>
                             </LinkContainer>     
                         </Nav>
