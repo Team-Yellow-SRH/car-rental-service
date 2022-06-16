@@ -1,0 +1,142 @@
+[
+   {
+      "service station id":1,
+      "Sevice station Name":"Parrnell",
+      "Longitutde":8.65513,
+      "Latitutde":49.41423,
+      "Capacity":49
+   },
+   {
+      "service station id":2,
+      "Sevice station Name":"Karita",
+      "Longitutde":8.46564,
+      "Latitutde":49.48695,
+      "Capacity":43
+   },
+   {
+      "service station id":3,
+      "Sevice station Name":"Dena",
+      "Longitutde":8.55901,
+      "Latitutde":49.45407,
+      "Capacity":24
+   },
+   {
+      "service station id":4,
+      "Sevice station Name":"Morty",
+      "Longitutde":-58.5069115,
+      "Latitutde":-34.6093426,
+      "Capacity":23
+   },
+   {
+      "service station id":5,
+      "Sevice station Name":"Andriana",
+      "Longitutde":107.7843483,
+      "Latitutde":-7.0631844,
+      "Capacity":31
+   },
+   {
+      "service station id":6,
+      "Sevice station Name":"Kalil",
+      "Longitutde":-85.68986,
+      "Latitutde":10.5570353,
+      "Capacity":43
+   },
+   {
+      "service station id":7,
+      "Sevice station Name":"Kalinda",
+      "Longitutde":7.3660499,
+      "Latitutde":48.73934,
+      "Capacity":14
+   },
+   {
+      "service station id":8,
+      "Sevice station Name":"Gale",
+      "Longitutde":24.2604924,
+      "Latitutde":55.0775116,
+      "Capacity":29
+   },
+   {
+      "service station id":9,
+      "Sevice station Name":"Sidoney",
+      "Longitutde":21.66245,
+      "Latitutde":47.4936583,
+      "Capacity":10
+   },
+   {
+      "service station id":10,
+      "Sevice station Name":"Hobey",
+      "Longitutde":119.572183,
+      "Latitutde":-5.018945,
+      "Capacity":27
+   },
+   {
+      "service station id":11,
+      "Sevice station Name":"Johnathan",
+      "Longitutde":-79.222328,
+      "Latitutde":-5.9345929,
+      "Capacity":10
+   },
+   {
+      "service station id":12,
+      "Sevice station Name":"Keefe",
+      "Longitutde":-53.66667,
+      "Latitutde":-22.96667,
+      "Capacity":32
+   },
+   {
+      "service station id":13,
+      "Sevice station Name":"Rufe",
+      "Longitutde":39.1006189,
+      "Latitutde":55.7711328,
+      "Capacity":29
+   },
+   {
+      "service station id":14,
+      "Sevice station Name":"Krystalle",
+      "Longitutde":-8.718171,
+      "Latitutde":41.2781543,
+      "Capacity":39
+   },
+   {
+      "service station id":15,
+      "Sevice station Name":"Dido",
+      "Longitutde":16.6445006,
+      "Latitutde":49.0549661,
+      "Capacity":34
+   },
+   {
+      "service station id":16,
+      "Sevice station Name":"Martguerita",
+      "Longitutde":-90.0163544,
+      "Latitutde":29.9246825,
+      "Capacity":11
+   },
+   {
+      "service station id":17,
+      "Sevice station Name":"Sondra",
+      "Longitutde":89.208761,
+      "Latitutde":29.686366,
+      "Capacity":31
+   },
+   {
+      "service station id":18,
+      "Sevice station Name":"Marje",
+      "Longitutde":47.9774052,
+      "Latitutde":29.375859,
+      "Capacity":6
+   },
+   {
+      "service station id":19,
+      "Sevice station Name":"Alicea",
+      "Longitutde":-9.3736528,
+      "Latitutde":38.7136413,
+      "Capacity":30
+   },
+   {
+      "service station id":20,
+      "Sevice station Name":"Karel",
+      "Longitutde":8.0495294,
+      "Latitutde":52.2415583,
+      "Capacity":50
+   }
+]
