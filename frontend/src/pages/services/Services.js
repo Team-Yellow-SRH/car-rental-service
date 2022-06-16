@@ -24,6 +24,20 @@ export const Services = () => {
                             </LinkContainer>     
                         </Nav>
                     </Row>
+                    <Row>
+                        <Nav>
+                            <LinkContainer to='pickup'>
+                                <Nav.Link>PickUpCar</Nav.Link>
+                            </LinkContainer>     
+                        </Nav>
+                    </Row>
+                    <Row>
+                        <Nav>
+                            <LinkContainer to='dropcar'>
+                                <Nav.Link>DropCar</Nav.Link>
+                            </LinkContainer>     
+                        </Nav>
+                    </Row>
                 </Col>
                 <Col><Outlet/></Col>
             </Row>

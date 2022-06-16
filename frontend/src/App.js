@@ -6,6 +6,9 @@ import { Homepage } from './pages/homepage/Homepage';
 import { Services } from './pages/services/Services';
 import { Replacement } from './components/replacement/Replacement';
 import { LeaveCar } from './components/leaveCar/LeaveCar';
+import { PickUpCar } from './components/pickupCar/PickupCar';
+import { DropCar } from './components/dropcar/DropCar';
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
         <Route path='/services' element={<Services/>}>
           <Route path='replacement' element={<Replacement/>}/>
           <Route path='leave' element={<LeaveCar/>}/>
+          <Route path='pickup' element={<PickUpCar/>}/>
+          <Route path='dropcar' element={<DropCar/>}/>
         </Route>
       </Routes>
     </div>
