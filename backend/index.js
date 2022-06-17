@@ -40,6 +40,42 @@ const serStn =    [{
     "Capacity":23
  }];
 
+ const carRen = [{
+    "CarRental_id":1,
+    "CarRental_Name":"Krisha",
+    "Longitude":8.65791,
+    "Latitude":49.41253
+ },
+ {
+    "CarRental_id":2,
+    "CarRental_Name":"Olin",
+    "Longitude":8.46993,
+    "Latitude":49.48399
+ },
+ {
+    "CarRental_id":3,
+    "CarRental_Name":"Redford",
+    "Longitude":-80.5443489,
+    "Latitude":43.4426097
+ },
+ {
+    "CarRental_id":4,
+    "CarRental_Name":"Clarinda",
+    "Longitude":121.0697978,
+    "Latitude":14.7040142
+ },
+ {
+    "CarRental_id":5,
+    "CarRental_Name":"Sibeal",
+    "Longitude":-65.5381671,
+    "Latitude":-25.1042007
+ },
+ {
+    "CarRental_id":6,
+    "CarRental_Name":"Jayson",
+    "Longitude":121.2769483,
+    "Latitude":-8.6969761
+ }];
 // //mongodb connection
 // const mongoURI ='mongodb://localhost:27017';
 // const {calculateObjectSize} = require('bson');
@@ -51,21 +87,42 @@ app.get('/', (req,res) => {
     res.send('Api is running...')
 })
 
-// getting data from frontend
-app.post('/nearby_rental_center', async(req, res) => {
+// getting data from frontend for finding nearby rental centre
+app.post('/nearby_rental_centre', async(req, res) => {
+    const {lat, lon} = req.body;
+    console.log(lat, lon);
+    const session = driver.session();
+    const distances1 =[];
+    const distances2 =[];
+
+    //for(let i=0;i<carRen.length;i++){
+    const ses1 = await session.run(`MATCH (p:carRental), (x:serviceCentre)
+    WITH point({longitude:toFloat(p.longitude), latitude:toFloat(p.latitude)}) as p1, point({ongitude:toFloat(x.Longitutde),latitude:toFloat(x.Latitude)}) as p2,p
+    WITH p,p1,p2,point.distance(p1,p2)/1000 as d
+    WHERE d<10
+    return p1 ,d ,p.name`);
+        distances1.push(await ses1.records[0]._fields[1]);
+        distances2.push(await ses1.records[0]._fields[2]);
+   // }
+   // console.log(distances1);
+    console.log(distances2);
+    await session.close();
+    res.json(distances1);
+
+})
+
+// getting data from frontend for finding nearby service centre
+app.post('/nearby_service_centre', async(req, res) => {
     const {lat, lon} = req.body;
     console.log(lat, lon);
     const session = driver.session();
     const distances =[];
-    for(let i=0;i<serStn.length;i++){
-    const ses = await session.run(`MATCH (p:person)
-    WITH point({longitude:toFloat(p.longitude), latitude:toFloat(p.latitude)}) as p1, point({longitude:toFloat(${serStn[i].Latitutde}),latitude:toFloat(${lat})}) as p2,p
+    const ses = await session.run(`MATCH (p:serviceCentre)
+    WITH point({longitude:toFloat(p.longitude), latitude:toFloat(p.latitude)}) as p1, point({longitude:toFloat(${lon}),latitude:toFloat(${lat})}) as p2,p
     WITH p,p1,p2,point.distance(p1,p2)/1000 as d
-    WHere d<50
-    return p1,d, p.carId`);
+    WHERE d < 50
+    return  d,p.name`);
         distances.push(await ses.records[0]._fields[1]);
-    }
-console.log(ses);
     await session.close();
     res.json(distances);
 
@@ -80,22 +137,6 @@ app.listen(process.env.PORT || 4000, () => console.log('Server is running on por
 
 //service centres: [sr1:{lat,lon}}, sr2{},sr3]
 
-// app.post('/getServiceCetnre', async(req,res)=>{
-//     //create connection neo4j
-//     var carlat= 49.123;   //select tag :-  list all cars 
-//     var carlon= 9.723
-
-
-//     neo4j.connect();
-
-//     const result=await {`query string ${carlat} ${carlon}`}
-
-    
-//     res.json(result);
-//     console.log(result);
-// })
-
-//
 
 // mongowriteData(shortestDistance)
 // {
